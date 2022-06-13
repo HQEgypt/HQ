@@ -1,0 +1,50 @@
+<script>
+  window.qbkStore = {
+    cartMapping: [],
+    isCartPage: false,
+    variants: [],
+    collections: [],
+    currency: "{{ shop.currency }}",
+    moneyFormat: {{ shop.money_format | json }},
+    moneyFormatWithCurrency: {{ shop.money_with_currency_format | json }},
+  }
+
+  {% if product %}
+  {% assign cids = product.collections | map: 'id' | join: ',' %}
+
+  window.qbkStore.collections = [{{ cids }}]
+  {% for item in product.variants %}
+  window.qbkStore.variants.push({
+    id: '{{ item.id }}',
+    price: '{{ item.price }}',
+    name: '{{ item.product.title }} - {{ item.title }}',
+  })
+  {% endfor %}
+  {% endif %}
+
+
+  {% if cart %}
+  window.qbkStore.cartTotal = {{ cart.total_price }};
+  {% for item in cart.items %}
+  window.qbkStore.cartMapping.push({
+    productId: '{{ item.product.id }}',
+    variantId: '{{ item.variant_id }}',
+    name: '{{ item.title }}',
+    collections: ["{{ item.product.collections | map: 'id' | join: '", "' }}"],
+    properties:{
+      {% for property in item.properties %}
+      	"{{ property[0] }}": "{{ property[1] }}"
+    	{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    },
+    quantity: {{ item.quantity }},
+    key: '{{ item.key }}',
+    price: '{{ item.price }}',
+  });
+  {% endfor %}
+  {% endif %}
+
+  {% if template == 'cart' %}
+  window.qbkStore.isCartPage = true;
+  {% endif %}
+</script>

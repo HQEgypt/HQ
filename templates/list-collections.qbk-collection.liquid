@@ -1,0 +1,18 @@
+{% layout none %}
+{% if collections %}
+{
+"collectionData": [
+  {% for collection in collections %}
+  {% assign pids = collection.products | map: 'id' | join: ',' %}
+      {
+      "id": "{{ collection.id }}",
+      "title": "{{ collection.title }}",
+      "productIds": [{{ pids }}]
+      }
+  {% if forloop.last != true %}
+  ,
+  {% endif %}
+  {% endfor %}
+  ]
+}
+{% endif %}

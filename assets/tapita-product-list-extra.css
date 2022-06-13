@@ -1,0 +1,3 @@
+
+        .type_product_scroll .product-grid{display:flex;overflow:auto;scrollbar-width:none;-ms-overflow-style:none;flex-direction: column;max-height: 500px;}.type_product_scroll .product-grid::-webkit-scrollbar{display:none}.type_product_scroll .product-grid>.grid__item{min-width:25rem;padding-right:1rem}
+        

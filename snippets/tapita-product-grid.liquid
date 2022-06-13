@@ -1,0 +1,84 @@
+
+            <div class="tapitaSection">
+                {{ 'tapita-template-collection.css' | asset_url | stylesheet_tag }}
+                {{ 'tapita-component-loading-overlay.css' | asset_url | stylesheet_tag }}
+                {{ 'tapita-component-card.css' | asset_url | stylesheet_tag }}
+                {{ 'tapita-component-price.css' | asset_url | stylesheet_tag }}
+                {{ 'tapita-component-product-grid.css' | asset_url | stylesheet_tag }}
+                {{ 'tapita-product-list-extra.css' | asset_url | stylesheet_tag }}
+
+                <link rel="preload" href="{{ 'component-rte.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+                <noscript>{{ 'component-rte.css' | asset_url | stylesheet_tag }}</noscript>
+
+                {% assign real_product-handle = product_handle | default: section.settings.product-handle %}
+                {% assign real_product_target_ident = product_target_ident | default: section.settings.product_target_ident %}
+                {% assign real_product_ident = product_ident | default: section.settings.product_ident %}
+                {% assign real_product-title = product_title | default: section.settings.product-title %}
+                {% assign real_product-limit = product_limit | default: section.settings.product-limit %}
+
+                {% assign cr_collection = collections[real_product-handle] %}
+                {% assign target = real_product_target_ident %}
+                {% assign ident = target | split: "_" | reverse | first%}
+
+                {% assign self_identification = "ProductGridContainer "
+                | append: real_product_ident
+                | append: "_"
+                | append: ident
+                %}
+
+                {%- if cr_collection and cr_collection.products.size > 0 -%}
+
+                <div class="{{self_identification}}" style="display: none;">
+                        <div class="collection page-width">
+                        <div class="loading-overlay gradient"></div>
+                        {% if real_product-title %}
+                            <h3>{{real_product-title}}</h3>
+                        {% endif %}
+                        <ul class="
+                            grid grid--2-col negative-margin product-grid
+                            {% if cr_collection.products_count < 4 %} grid--{{ cr_collection.products_count }}-col-tablet{% else %}
+                            {% if cr_collection.products_count == 4 %} grid--4-col-desktop{% else %} grid--3-col-tablet grid--one-third-max grid--4-col-desktop grid--quarter-max{% endif %}
+                            {% endif %}">
+                            {%- for product in cr_collection.products limit: real_product-limit -%}
+                            <li class="grid__item">
+                                {% render 'tapita-product-card',
+                                product_card_product: product,
+                                media_size: section.settings.image_ratio,
+                                show_secondary_image: section.settings.show_secondary_image,
+                                add_image_padding: section.settings.add_image_padding,
+                                show_vendor: section.settings.show_vendor,
+                                show_image_outline: section.settings.show_image_outline,
+                                show_rating: section.settings.show_rating
+                                %}
+                            </li>
+                            {%- endfor -%}
+                        </ul>
+                        </div>
+                        {%- endif -%}
+                </div>
+
+                <script>
+                    var counter_{{ident}} = 0;
+                    var timer_{{ident}} = setInterval(function () {
+                    try{
+                //       counter_{{ident}} += 1;
+                        let target_c = document.querySelector("{{target}}");
+                        if (target_c && !target_c.innerHTML) {
+                        let self_c = document.getElementsByClassName("{{self_identification}}");
+                        if(self_c.length >0 ){
+                            target_c.style.setProperty('display', 'block')
+                            target_c.style.setProperty('overflow', 'clip')
+                            target_c.innerHTML = self_c[0].innerHTML;
+                        }
+                //         clearInterval(timer_{{ident}});
+                        } else if (counter_{{ident}} > 30) {
+                //         clearInterval(timer_{{ident}});
+                        }
+                    }catch(e){
+                        console.warn(e)
+                        clearInterval(timer_{{ident}});
+                    }
+                }, 300);
+                </script>
+                </div>
+        
