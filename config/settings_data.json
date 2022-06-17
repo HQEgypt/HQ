@@ -199,14 +199,14 @@
         "settings": {
         }
       },
-      "4571859552318407796": {
-        "type": "shopify:\/\/apps\/globo-color-swatch\/blocks\/app-embed-block\/4394f710-096c-4021-bbde-8ebb26057c11",
+      "16227139036114047412": {
+        "type": "shopify:\/\/apps\/ali-reviews-product-reviews\/blocks\/alireviews-core\/bf2eea72-0400-4db1-8908-44b7418f9a88",
         "disabled": false,
         "settings": {
         }
       },
-      "1513253815146976218": {
-        "type": "shopify:\/\/apps\/omnisend-email-marketing-sms\/blocks\/app-embed\/44704aa2-794f-4c5d-8c8e-039c841158e9",
+      "18306912302550125850": {
+        "type": "shopify:\/\/apps\/opinew-product-reviews-app\/blocks\/rich-snippet\/e1d8e0dc-17ff-4e4a-8a8a-1e73c8ef8676",
         "disabled": false,
         "settings": {
         }
@@ -214,6 +214,24 @@
       "12542944477430767875": {
         "type": "shopify:\/\/apps\/pixeli-facebook-pixel-app\/blocks\/facebook-pixel\/80936fd4-4a11-47fe-8fc8-5d3e9b04878a",
         "disabled": false,
+        "settings": {
+        }
+      },
+      "4571859552318407796": {
+        "type": "shopify:\/\/apps\/g-variant-image-color-swatch\/blocks\/app-embed-block\/4394f710-096c-4021-bbde-8ebb26057c11",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "1513253815146976218": {
+        "type": "shopify:\/\/apps\/omnisend-email-marketing-sms\/blocks\/app-embed\/44704aa2-794f-4c5d-8c8e-039c841158e9",
+        "disabled": true,
+        "settings": {
+        }
+      },
+      "9790993569898449839": {
+        "type": "shopify:\/\/apps\/opinew-product-reviews-app\/blocks\/global\/e1d8e0dc-17ff-4e4a-8a8a-1e73c8ef8676",
+        "disabled": true,
         "settings": {
         }
       }
