@@ -37,7 +37,7 @@
         "button"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Untitzzled-19.jpg",
+        "image": "shopify:\/\/shop_images\/Untitled-6-Recovered.jpg",
         "image_overlay_opacity": 10,
         "image_height": "large",
         "adapt_height_first_image": true,
@@ -101,7 +101,7 @@
       "settings": {
         "title": "Collections",
         "heading_size": "h1",
-        "image_ratio": "portrait",
+        "image_ratio": "square",
         "columns_desktop": 3,
         "color_scheme": "background-1",
         "show_view_all": false,
@@ -278,20 +278,20 @@
         "collection-0": {
           "type": "collection",
           "settings": {
-            "collection": "lips"
+            "collection": "best-selling-products"
           }
         },
         "product": {
           "type": "product",
           "settings": {
-            "product": "impala-lipstick-silky-mega-stay",
+            "product": "impala-automatic-matt-lipstick",
             "second_image": false
           }
         },
         "collection-1": {
           "type": "collection",
           "settings": {
-            "collection": "261927141534"
+            "collection": "mirrors"
           }
         }
       },
@@ -394,15 +394,6 @@
     "165132023604aa3f86": {
       "type": "apps",
       "blocks": {
-        "a8c46ce5-d942-4e9d-af7d-d142930b1997": {
-          "type": "shopify:\/\/apps\/instafeed-instagram-feed\/blocks\/app-block\/c447db20-095d-4a10-9725-b5977662c9d5",
-          "disabled": true,
-          "settings": {
-            "heading_size": 22,
-            "feed_width": 100,
-            "html_area": ""
-          }
-        },
         "a8bba143-ef8b-4319-a33a-06b93c60acdb": {
           "type": "shopify:\/\/apps\/instafeed-instagram-feed\/blocks\/app-block\/c447db20-095d-4a10-9725-b5977662c9d5",
           "settings": {
@@ -413,7 +404,6 @@
         }
       },
       "block_order": [
-        "a8c46ce5-d942-4e9d-af7d-d142930b1997",
         "a8bba143-ef8b-4319-a33a-06b93c60acdb"
       ],
       "settings": {
@@ -433,8 +423,8 @@
         "show_date": false,
         "show_author": false,
         "show_view_all": true,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 52,
+        "padding_bottom": 44
       }
     }
   },

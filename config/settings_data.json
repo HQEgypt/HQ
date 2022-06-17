@@ -1,9 +1,9 @@
 {
   "current": {
     "colors_solid_button_labels": "#ffffff",
-    "colors_accent_1": "#8f8fed",
+    "colors_accent_1": "#b19a60",
     "gradient_accent_1": "",
-    "colors_accent_2": "#8f8fed",
+    "colors_accent_2": "#b19a60",
     "gradient_accent_2": "",
     "colors_text": "#121212",
     "colors_outline_button_labels": "#121212",
@@ -63,7 +63,7 @@
     "media_radius": 0,
     "media_shadow_opacity": 0,
     "media_shadow_horizontal_offset": 0,
-    "media_shadow_vertical_offset": 4,
+    "media_shadow_vertical_offset": 36,
     "media_shadow_blur": 5,
     "popup_border_thickness": 1,
     "popup_border_opacity": 10,
@@ -123,8 +123,8 @@
         "settings": {
           "color_scheme": "background-1",
           "logo": "shopify:\/\/shop_images\/impala_logo_new_1_bcdf3bdd-8264-46b6-9e7f-7095d3585f58.png",
-          "logo_width": 200,
-          "logo_position": "middle-left",
+          "logo_width": 220,
+          "logo_position": "top-center",
           "menu": "main-menu",
           "menu_type_desktop": "mega",
           "show_line_separator": false,
