@@ -4,7 +4,11 @@ If you plan to remove PageFly, please see the guide in our help center first: ht
 {% endcomment %}
 <!doctype html>
 <html class="no-js" lang="{{ request.locale.iso_code }}">
-  <head>{% render 'pagefly-head' %}
+  <head>{% include 'best-option-initializer' %}
+{%- comment -%}DHSEO_START{%- endcomment -%}{% capture dh %}{% include 'dhseo-snippet' %}{% endcapture %}{% unless dh contains 'Liquid error' %}{% include 'dhseo-snippet' %}{% endunless %}{%- comment -%}DHSEO_END{%- endcomment -%}{% render 'pagefly-head' %}{% capture sb %}{% include 'sb-snippet' %}{% endcapture %}{% unless sb contains 'Liquid error' %}{% include 'sb-snippet' %}{% endunless %}
+
+
+{% render 'pagefly-head' %}
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">

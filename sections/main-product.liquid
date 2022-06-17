@@ -213,6 +213,7 @@
                 </h2>
               </a>
             </div>
+            <div product-id="{{ product.id }}" class="alr-display-review-badge"></div>
           {%- when 'price' -%}
             <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
               {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}
@@ -587,7 +588,8 @@
 
   <script type="application/ld+json">
     {
-      "@context": "http://schema.org/",
+      "@context": "http://schema.org/", 
+ {{ product.metafields.alireviews.seo_rating_review_key_script }}
       "@type": "Product",
       "name": {{ product.title | json }},
       "url": {{ request.origin | append: product.url | json }},
