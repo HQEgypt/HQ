@@ -37,7 +37,7 @@
         "button"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Untzzitled-1.jpg",
+        "image": "shopify:\/\/shop_images\/Untitzzled-19.jpg",
         "image_overlay_opacity": 10,
         "image_height": "large",
         "adapt_height_first_image": true,
@@ -259,7 +259,7 @@
         "1653143910622c1945-2"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Untitled-6-Recovered.jpg",
+        "image": "shopify:\/\/shop_images\/AAAAitled-8.jpg",
         "image_overlay_opacity": 0,
         "image_height": "medium",
         "adapt_height_first_image": true,
@@ -424,7 +424,7 @@
       "type": "featured-blog",
       "settings": {
         "heading": "Blog posts",
-        "heading_size": "h1",
+        "heading_size": "h0",
         "blog": "impala-cosmetics-blog",
         "post_limit": 3,
         "columns_desktop": 3,
