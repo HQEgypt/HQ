@@ -199,12 +199,6 @@
         "settings": {
         }
       },
-      "16227139036114047412": {
-        "type": "shopify:\/\/apps\/ali-reviews-product-reviews\/blocks\/alireviews-core\/bf2eea72-0400-4db1-8908-44b7418f9a88",
-        "disabled": false,
-        "settings": {
-        }
-      },
       "18306912302550125850": {
         "type": "shopify:\/\/apps\/opinew-product-reviews-app\/blocks\/rich-snippet\/e1d8e0dc-17ff-4e4a-8a8a-1e73c8ef8676",
         "disabled": false,
@@ -223,15 +217,15 @@
         "settings": {
         }
       },
-      "1513253815146976218": {
-        "type": "shopify:\/\/apps\/omnisend-email-marketing-sms\/blocks\/app-embed\/44704aa2-794f-4c5d-8c8e-039c841158e9",
+      "9790993569898449839": {
+        "type": "shopify:\/\/apps\/opinew-product-reviews-app\/blocks\/global\/e1d8e0dc-17ff-4e4a-8a8a-1e73c8ef8676",
         "disabled": true,
         "settings": {
         }
       },
-      "9790993569898449839": {
-        "type": "shopify:\/\/apps\/opinew-product-reviews-app\/blocks\/global\/e1d8e0dc-17ff-4e4a-8a8a-1e73c8ef8676",
-        "disabled": true,
+      "1513253815146976218": {
+        "type": "shopify:\/\/apps\/omnisend-email-marketing-sms\/blocks\/app-embed\/44704aa2-794f-4c5d-8c8e-039c841158e9",
+        "disabled": false,
         "settings": {
         }
       }
