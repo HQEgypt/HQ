@@ -5,9 +5,8 @@
       "blocks": {
         "heading": {
           "type": "heading",
-          "disabled": true,
           "settings": {
-            "heading": "IMPALA Cosmetics",
+            "heading": "The Beauty Is You",
             "heading_size": "h0"
           }
         },
@@ -37,7 +36,7 @@
         "button"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Untitled-6-Recovered.jpg",
+        "image": "shopify:\/\/shop_images\/pexels-lena-hsvl-6691152_copy.jpg",
         "image_overlay_opacity": 10,
         "image_height": "large",
         "adapt_height_first_image": true,
