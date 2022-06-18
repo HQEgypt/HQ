@@ -1,6 +1,7 @@
 <!doctype html>
 <html class="no-js" lang="{{ request.locale.iso_code }}">
-  <head>{% include 'best-option-initializer' %}
+  <head>
+ <script src="https://cdn.shopifycdn.net/s/files/1/0617/5385/2157/t/1/assets/zs_pub_translate_main.js"></script>{% include 'best-option-initializer' %}
 {%- comment -%}DHSEO_START{%- endcomment -%}{% capture dh %}{% include 'dhseo-snippet' %}{% endcapture %}{% unless dh contains 'Liquid error' %}{% include 'dhseo-snippet' %}{% endunless %}{%- comment -%}DHSEO_END{%- endcomment -%}{% render 'pagefly-head' %}{% capture sb %}{% include 'sb-snippet' %}{% endcapture %}{% unless sb contains 'Liquid error' %}{% include 'sb-snippet' %}{% endunless %}
 
 
@@ -214,9 +215,9 @@
     </script>
   {% render "rafp-render" %}
 {% include 'swift_core' %} 
- {% include 'sohead-reply-common' %}</head>
+ {% include 'sohead-reply-common' %}{{ 'lt-flags.css'| asset_url | stylesheet_tag }}</head>
 
-  <body class="gradient">
+  <body class="gradient">{% include 'appjetty-language-translator' %}
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ "accessibility.skip_to_text" | t }}
     </a>
@@ -266,3 +267,6 @@
     {%- endif -%}
   </body>
 </html>
+
+{% include 'etranslate-language-switch-control' %}
+{% include 'etranslate-rtl' %}

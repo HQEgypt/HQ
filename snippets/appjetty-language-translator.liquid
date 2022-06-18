@@ -1,0 +1,54 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/currency-flags/2.1.2/currency-flags.min.css"/>
+
+<script type="text/javascript">  
+  function buildLanguageListAppJetty() {
+    return [
+      {%- for locale in shop.published_locales %}
+      {
+        name: '{{locale.name}}',
+        endonym_name: '{{locale.endonym_name}}',
+        iso_code: '{{locale.iso_code}}',
+        primary: {{locale.primary}},
+      }{% unless forloop.last %},{% endunless -%}
+      {%- endfor %}
+    ];
+  }
+  
+var shopDomain = 'https://{{shop.domain}}';
+
+var languages = buildLanguageListAppJetty();
+var primaryLanguage = languages.find(function (x) { return x.primary; });
+var defaultLocale = primaryLanguage ? primaryLanguage.iso_code : 'en';
+var currentLocale = findCurrentLocale(languages, defaultLocale);
+var current_query = window.location.search;
+
+function findCurrentLocale(e, n) {
+    var t = window.location.pathname.split("/").filter(function(e) {
+        return e
+    });
+    return t && t.length > 0 && e.find(function(e) {
+        return e.iso_code === t[0]
+    }) ? t[0] : n
+}
+
+function redirect(requested_locale){
+      
+      if(requested_locale != currentLocale){
+        var primary_locale = primaryLanguage.iso_code;
+        var current_path = window.location.pathname;
+        
+        if(primary_locale === requested_locale){
+          if(current_path != shopDomain){
+            window.location.assign(shopDomain);
+          } 
+        }
+        else{
+          var cp = current_path.replace('/'+currentLocale,'');
+          var redirect_to = shopDomain + '/' + requested_locale +''+cp;
+          window.location.assign(redirect_to);
+        }  
+      }
+    }
+
+</script>
+
