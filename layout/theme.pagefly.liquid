@@ -218,7 +218,9 @@ If you plan to remove PageFly, please see the guide in our help center first: ht
     </script>
   {% render "rafp-render" %}
 {% include 'swift_core' %} 
- </head>
+ {% render 'weglot_hreftags' %}
+{% render 'weglot_switcher' %}
+</head>
 
   <body class="gradient"><div class="pagefly-container">{{ content_for_layout }}</div></body>
 </html>

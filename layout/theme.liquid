@@ -215,7 +215,9 @@
     </script>
   {% render "rafp-render" %}
 {% include 'swift_core' %} 
- {% include 'sohead-reply-common' %}{{ 'lt-flags.css'| asset_url | stylesheet_tag }}</head>
+ {% include 'sohead-reply-common' %}{{ 'lt-flags.css'| asset_url | stylesheet_tag }}{% render 'weglot_hreftags' %}
+{% render 'weglot_switcher' %}
+</head>
 
   <body class="gradient">{% include 'appjetty-language-translator' %}
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
