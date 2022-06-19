@@ -1,7 +1,39 @@
 {
   "shopify": {
     "sentence": {
-      "words_connector": "و"
+      "words_connector": "و",
+      "last_word_connector": "، و"
+    },
+    "checkout": {
+      "general": {
+        "error_page_title": "خطأ",
+        "skip_to_content": "تخطى الى المحتوى",
+        "breadcrumb": "مسار التنقل",
+        "continue_button_label": "الاستمرار",
+        "complete_purchase_button_label": "اكمل الطلب",
+        "pay_now_button_label": "ادفع الآن",
+        "authenticate_purchase_button_label": "المصادقة على الدفع",
+        "edit_link_label": "يحرر",
+        "all_rights_reserved": "جميع الحقوق محفوظة %{shop_name}",
+        "print_policies_link_label": "مطبعة",
+        "cart": "عربة التسوق",
+        "close_modal_label": "يغلق",
+        "close_notice_label": "يغلق",
+        "expand_notice_label": "عرض المزيد",
+        "continue_to_shipping_method": "تواصل الشحن",
+        "continue_to_payment_method": "تواصل الدفع",
+        "continue_to_review": "مراجعة الطلب"
+      }
+    }
+  },
+  "sections": {
+    "header": {
+      "announcement": "إعلان",
+      "menu": "قائمة",
+      "cart_count": {
+        "one": "{{ count }} قطعة",
+        "other": "{{ count }} قطعة"
+      }
     }
   }
 }
