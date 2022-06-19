@@ -5,14 +5,14 @@
       "blocks": {
         "heading": {
           "type": "heading",
+          "disabled": true,
           "settings": {
             "heading": "The Beauty Is You",
-            "heading_size": "h0"
+            "heading_size": "h2"
           }
         },
         "text": {
           "type": "text",
-          "disabled": true,
           "settings": {
             "text": "The Beauty Is You",
             "text_style": "body"
@@ -37,14 +37,14 @@
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/pexels-lena-hsvl-6691152_copy.jpg",
-        "image_overlay_opacity": 10,
+        "image_overlay_opacity": 0,
         "image_height": "large",
         "adapt_height_first_image": true,
         "desktop_content_position": "bottom-center",
         "show_text_box": false,
         "desktop_content_alignment": "center",
         "color_scheme": "background-1",
-        "mobile_content_alignment": "left",
+        "mobile_content_alignment": "center",
         "stack_images_on_mobile": false,
         "show_text_below": false
       }
