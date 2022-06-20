@@ -5,8 +5,8 @@
     "gradient_accent_1": "",
     "colors_accent_2": "#b19a60",
     "gradient_accent_2": "",
-    "colors_text": "#121212",
-    "colors_outline_button_labels": "#121212",
+    "colors_text": "#696161",
+    "colors_outline_button_labels": "#b19a60",
     "colors_background_1": "#ffffff",
     "gradient_background_1": "",
     "colors_background_2": "#ffffff",
@@ -22,7 +22,7 @@
     "buttons_border_thickness": 1,
     "buttons_border_opacity": 50,
     "buttons_radius": 0,
-    "buttons_shadow_opacity": 0,
+    "buttons_shadow_opacity": 10,
     "buttons_shadow_horizontal_offset": 0,
     "buttons_shadow_vertical_offset": 2,
     "buttons_shadow_blur": 5,
@@ -97,7 +97,7 @@
     "predictive_search_show_price": true,
     "currency_code_enabled": true,
     "checkout_logo_image": "shopify:\/\/shop_images\/impala_logo_new_1_1b0ef8be-aadb-4a4d-ad50-1910c13d863b.png",
-    "checkout_accent_color": "#ffd4d4",
+    "checkout_accent_color": "#b19a60",
     "checkout_button_color": "#b19a60",
     "sections": {
       "announcement-bar": {
@@ -232,18 +232,6 @@
       "9143341338759596141": {
         "type": "shopify:\/\/apps\/language-translate-transify\/blocks\/app-embed\/94b2a5ec-733a-4aa0-b07f-b4c291c6c1bd",
         "disabled": false,
-        "settings": {
-        }
-      },
-      "language-translate": {
-        "type": "shopify:\/\/apps\/uplinkly-language-translate\/blocks\/language-translate\/56a854bb-67ff-48c6-ba58-9185b4505de7",
-        "disabled": true,
-        "settings": {
-        }
-      },
-      "6744518860797519131": {
-        "type": "shopify:\/\/apps\/et-language-translate-currency\/blocks\/floating-selector\/35c05b0e-4f05-4fc9-adc7-77b6ccb6b2ca",
-        "disabled": true,
         "settings": {
         }
       }
