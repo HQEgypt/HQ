@@ -1,0 +1,392 @@
+
+<language-inline-forms>
+
+  {%- form 'localization', id: 'InlineLanguageForm', class: 'localization-forms' -%}
+    <div class="inlineSwitcher" id="inline-language-switcher">
+      <button
+        id="choosen-inline" type="button" class="choosen"
+        aria-expanded="false" aria-controls="InlineLanguageList" 
+        aria-describedby="InlineLanguageLabel"
+      >
+        <div>
+          <img
+            src="https://ik.imagekit.io/retainiq/language-flags/{{ localization.language.iso_code }}.png"
+            width="22"
+            height="16"
+            alt="{{ localization.language.iso_code }}"
+            class="inline-flags"
+          />              
+            <span class="inline-name">{{ localization.language.endonym_name | capitalize }}</span>
+            <span class="inline-code">{{ localization.language.iso_code | upcase }}</span>
+        </div>
+        <div id="inline-arrows">
+          <div class="arrow-down">
+            <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 20 20" fill="#999">
+                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+          </div>
+          <div class="arrow-up">
+            <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 20 20" fill="#999">
+                <path fill-rule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd" />
+            </svg>
+          </div>
+        </div>
+      </button>
+        <ul class="inline-option dropdown-options" id="InlineLanguageList" role="list">
+            {%- for language in localization.available_languages -%}
+            <li tabindex="-1">
+                <a href="#" hreflang="{{ language.iso_code }}"
+                {% if language.iso_code == localization.language.iso_code %} aria-current="true"{% endif %}
+                data-value="{{ language.iso_code }}">
+                <img
+                    src="https://ik.imagekit.io/retainiq/language-flags/{{ language.iso_code }}.png"
+                    width="22"
+                    height="16"
+                    alt="{{ language.iso_code }}"
+                    class="inline-flags"
+                />              
+                <span class="inline-name">{{ language.endonym_name | capitalize }}</span>
+                <span class="inline-code">{{ language.iso_code | upcase }}</span>
+                </a>
+            </li>
+            {%- endfor -%}
+        </ul>
+    </div>
+
+    <div id="inline-modal" class="modal-window" onclick="closeInlineModal()" style="display: none">
+      <div>
+        <div class="popup-title">Select Language</div>
+        <div onclick="closeInlineModal()" class="modal-close inline-text" type="button">Close</div>
+        <ul class="popup-options" id="InlineLanguageList" role="list">
+        {%- for language in localization.available_languages -%}
+          <li tabindex="-1">
+            <a href="#" hreflang="{{ language.iso_code }}"
+              {% if language.iso_code == localization.language.iso_code %} aria-current="true"{% endif %}
+              data-value="{{ language.iso_code }}">
+              <img
+                src="https://ik.imagekit.io/retainiq/language-flags/{{ language.iso_code }}.png"
+                width="64"
+                height="44"
+                alt="{{ language.iso_code }}"
+                class="inline-flags"
+              />              
+               <div class="inline-name">{{ language.endonym_name | capitalize }}</div>
+                <div class="inline-code">{{ language.iso_code | upcase }}</div>
+            </a>
+          </li>
+        {%- endfor -%}
+        </ul>
+      </div>
+      <script>
+        const closeInlineModal = () => {
+          const modal = document.getElementById('inline-modal');
+          modal.style.visibility = 'hidden';
+          modal.style.opacity = 0;
+          modal.style.pointerEvents = 'none';
+        }
+      </script>
+    </div>
+   
+    <p id="shopUrl" hidden>{{ shop.permanent_domain }}<p>
+    <input type="hidden" name="locale_code" value="{{ localization.language.iso_code }}">
+
+  {%- endform -%}
+
+</language-inline-forms>
+
+<style>
+  a {
+    text-decoration: none;
+    font-size: 12pt;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    color: black;
+  }
+
+  .inlineSwitcher {
+    min-width: 140px;
+    width: 140px;
+    height: 32px;
+    position: relative;
+    display: flex;
+    font-family: 'Roboto', sans-serif !important;
+    font-size: 12pt;
+    text-align: left;
+    cursor: pointer;
+    line-height: 17px;
+    z-index: 99999;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  }
+
+  .inlineSwitcher:hover .inline-option {
+    display: block
+  }
+  .inline-option {
+    position: absolute;
+    display: none;
+    top: 28px;
+    left: 0px;
+    font-size: 1.4rem;
+    z-index: 99998;
+    background-color: #fff;
+    width: 140px;
+    max-height: 198px;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  }
+  .inline-option a {
+    font-size: 14px;
+    display: flex;
+  }
+  .inline-option li {
+    padding: 8px;
+  }
+  .inline-option li:hover {
+    background-color: #eee;
+  }
+  .inline-option a img {
+    vertical-align: middle;
+    display: inline;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    opacity: 0.8;
+  }
+  .inline-option a span {
+    vertical-align: middle;
+    margin-left: 4px;
+  }
+
+  button.choosen {
+    display: flex;
+    justify-content: space-between;
+    min-width: inherit;
+    position: relative;
+    z-index: 99999;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    background-color: #fff;
+    align-content: center;
+    flex-wrap: nowrap;
+    font-size: 14px;
+    color: #000;
+    flex-direction: row;
+    align-items: center;
+    height: 32px;
+    cursor: pointer;
+    text-transform: none;
+  }
+  .choosen .img {
+    vertical-align: middle;
+    display: inline;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    opacity: 0.8;
+  }
+  .choosen span {
+    vertical-align: middle;
+    margin-left: 4px;
+  }
+  .inlineSwitcher:hover .choosen .arrow-down {
+    display: none;
+  }
+  .choosen .arrow-up {
+    display: none;
+  }
+  .inlineSwitcher:hover .choosen .arrow-up {
+    display: inline;
+  }
+
+  #inline-arrows {
+    margin-left: 8px;
+  }
+
+  .inline-flags {
+    vertical-align: middle;
+    display: inline-block;
+    width: 22px;
+    height: 16px;
+  }
+
+  .modal-window {
+    position: fixed;
+    letter-spacing: 0;
+    line-height: 1;
+    font-family: 'Roboto', sans-serif !important;
+    background-color: rgba(255, 255, 255, 0.25);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 99999;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s;
+  }
+  .modal-window > div {
+    max-width: 600px;
+    min-width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2em 2em 1em 2em;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    border-radius: 1rem;
+    overflow: hidden;
+    background-color: #fff;
+  }
+  .modal-close {
+    color: #aaa;
+    line-height: 50px;
+    font-size: 80%;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    width: 70px;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .modal-window div:not(:last-of-type) {
+    margin-bottom: 15px;
+  }
+  .popup-title {
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    font-weight: bold;
+    margin: 0 0 15px;
+    font-size: 24px;
+  }
+  .popup-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    max-height: 340px;
+    overflow-y: auto;
+  }
+  .popup-options .inline-flags {
+    width: 64px;
+    height: 44px;
+  }
+
+  .popup-options li {
+    margin: 20px 20px 0;
+    list-style: none !important;
+  }
+  .popup-options a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .popup-options a div {
+    text-align: center;
+    margin-top: 8px;
+  }
+  .popup-options a img {
+    opacity: 0.75;
+    margin: auto;
+  }
+  .popup-options li:hover img {
+    opacity: 1;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  }
+
+  .inline-name, .inline-code {
+    display: none;
+  }
+</style>
+
+<script type="text/javascript">
+class LanguageInline extends HTMLElement {
+  constructor() {
+    super();
+    this.elements = {
+      input: this.querySelector(
+        'input[name="locale_code"], input[name="country_code"]'
+      ),
+      button: this.querySelector("button"),
+      panel: this.querySelector("ul"),
+    };
+
+    this.querySelectorAll("a").forEach((item) =>
+      item.addEventListener("click", this.onItemClick.bind(this))
+    );
+  }
+
+  closePanel(event) {
+    console.log(event);
+    this.hidePanel();
+  }
+
+  hidePanel() {
+    this.elements.button.setAttribute("aria-expanded", "false");
+    this.elements.panel.setAttribute("hidden", true);
+  }
+
+  onContainerKeyUp(event) {
+    if (event.code.toUpperCase() !== "ESCAPE") return;
+
+    this.hidePanel();
+    this.elements.button.focus();
+  }
+
+  onItemClick(event) {
+    event.preventDefault();
+    const form = this.querySelector("form");
+    this.elements.input.value = event.currentTarget.dataset.value;
+    if (form) form.submit();
+  }
+
+  openSelector() {
+    this.elements.button.focus();
+    this.elements.panel.toggleAttribute("hidden");
+    this.elements.button.setAttribute(
+      "aria-expanded",
+      (
+        this.elements.button.getAttribute("aria-expanded") === "false"
+      ).toString()
+    );
+  }
+
+  closeSelector(event) {
+    const shouldClose =
+      event.relatedTarget && event.relatedTarget.nodeName === "BUTTON";
+    if (event.relatedTarget === null || shouldClose) {
+      this.hidePanel();
+    }
+  }
+}
+customElements.define("language-inline-forms", LanguageInline);
+</script>
+<style>
+.inline-name {display: inline !important;}
+</style>
+<script>
+const langDropdown = document.querySelector(
+      ".inlineSwitcher .dropdown-options"
+    );
+    const langPopup = document.getElementById("inline-modal");
+    const langArrows = document.getElementById("inline-arrows");
+    const langChoosenBtn = document.getElementById("choosen-inline");
+langPopup.remove();
+</script>
