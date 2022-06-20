@@ -425,9 +425,16 @@
         "padding_top": 52,
         "padding_bottom": 44
       }
+    },
+    "social_widget_43492": {
+      "type": "social-widget",
+      "settings": {
+        "social_widget_id": "43492"
+      }
     }
   },
   "order": [
+    "social_widget_43492",
     "image_banner",
     "165133087583b0980c",
     "rich_text",
