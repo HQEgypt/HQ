@@ -220,6 +220,7 @@
 {% include 'swift_core' %} 
  {% include 'sohead-reply-common' %}{{ 'lt-flags.css'| asset_url | stylesheet_tag }}
   {% render 'judgeme_core' %}
+{% capture boostersnippet %}{% include "booster-apps-common" %}{% endcapture %}{% unless boostersnippet contains "Liquid error" %}{{ boostersnippet }}{% endunless %}
 </head>
 
   <body class="gradient">{% include 'appjetty-language-translator' %}

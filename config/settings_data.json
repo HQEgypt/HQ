@@ -106,14 +106,24 @@
           "announcement-bar-0": {
             "type": "announcement",
             "settings": {
-              "text": "Welcome to our store",
+              "text": "The Beauty Is You",
               "color_scheme": "accent-1",
               "link": "shopify:\/\/collections\/all"
+            }
+          },
+          "2e875f7c-9018-4682-87f8-4aa9554181c0": {
+            "type": "announcement",
+            "disabled": true,
+            "settings": {
+              "text": "Welcome to our store",
+              "color_scheme": "accent-1",
+              "link": ""
             }
           }
         },
         "block_order": [
-          "announcement-bar-0"
+          "announcement-bar-0",
+          "2e875f7c-9018-4682-87f8-4aa9554181c0"
         ],
         "settings": {
         }
@@ -238,6 +248,12 @@
       "11360718970158082676": {
         "type": "shopify:\/\/apps\/cross-sell-pro\/blocks\/crosssell\/a1de75bd-abc2-408f-b8be-5bce11f6a502",
         "disabled": true,
+        "settings": {
+        }
+      },
+      "7555218208816688692": {
+        "type": "shopify:\/\/apps\/email-popups-opt-in-pop-ups\/blocks\/app-embed\/48a5a3ef-b6ff-431f-842f-6f17862c4a63",
+        "disabled": false,
         "settings": {
         }
       }
