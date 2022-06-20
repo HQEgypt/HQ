@@ -565,7 +565,7 @@
         "cancelled_title": "تم إلغاء طلبك",
         "order_number_label": "رقم الطلب",
         "customer_validation_error": "أدخل بريدًا إلكترونيًا صالحًا أو رقم الطلب.",
-        "customer_validation_error_phone": "أدخل رقم هاتف أو طلب صالح.",
+        "customer_validation_error_phone": "أدخل رقم هاتف أو رقم طلب صالح.",
         "login": "تسجيل الدخول",
         "unfulfilled_items_title": "التحضير للشحن",
         "unfulfilled_items_description": "نقوم حاليًا بإعداد هذه العناصر للشحن.",
@@ -1491,7 +1491,8 @@
   },
   "newsletter": {
     "label": "البريد الإلكتروني",
-    "success": "شكرا على الإشتراك"
+    "success": "شكرا على الإشتراك",
+    "button_label": "الإشتراك"
   },
   "customer": {
     "addresses": {
@@ -1510,7 +1511,12 @@
       "cancel": "يلغي",
       "edit": "يحرر",
       "delete": "حذف",
-      "delete_confirm": "هل أنت متأكد أنك ترغب في حذف هذا العنوان؟"
+      "delete_confirm": "هل أنت متأكد أنك ترغب في حذف هذا العنوان؟",
+      "title": "عناوين",
+      "default": "تقصير",
+      "add_new": "أضف عنوانا جديدا",
+      "edit_address": "تعديل العنوان",
+      "first_name": "الاسم الاول"
     },
     "log_in": "تسجيل الدخول",
     "log_out": "تسجيل خروج",
@@ -1573,6 +1579,21 @@
       "password": "كلمة المرور",
       "password_confirm": "تأكيد كلمة المرور",
       "submit": "إعادة تعيين كلمة المرور"
+    },
+    "account": {
+      "title": "الحساب",
+      "details": "تفاصيل الحساب",
+      "view_addresses": "اعرض العناوين",
+      "return": "العودة إلى تفاصيل الحساب"
+    },
+    "account_fallback": "الحساب",
+    "activate_account": {
+      "title": "تفعيل حساب",
+      "subtext": "قم بإنشاء كلمة المرور الخاصة بك لتفعيل حسابك.",
+      "password": "كلمة المرور",
+      "password_confirm": "تأكيد كلمة المرور",
+      "submit": "تفعيل حساب",
+      "cancel": "رفض الدعوة"
     }
   },
   "gift_cards": {
@@ -1625,5 +1646,128 @@
       "signup_form_success": "سنرسل لك بريدًا إلكترونيًا قبل أن نفتح!",
       "password_link": "أدخل باستخدام كلمة المرور"
     }
+  },
+  "accessibility": {
+    "skip_to_text": "تخطى الى المحتوى",
+    "skip_to_product_info": "تخطي إلى معلومات المنتج",
+    "close": "قريب",
+    "unit_price_separator": "لكل",
+    "vendor": "بائع:",
+    "error": "خطأ",
+    "refresh_page": "اختيار نتائج التحديد في تحديث صفحة كاملة.",
+    "link_messages": {
+      "new_window": "يفتح في نافذة جديدة.",
+      "external": "يفتح موقع خارجي."
+    },
+    "loading": "جار التحميل...",
+    "total_reviews": "مجموع الاستعراضات",
+    "collapsible_content_title": "محتوى قابل للطي"
+  },
+  "blogs": {
+    "article": {
+      "blog": "مقالات",
+      "moderated": "يرجى ملاحظة أنه يجب الموافقة على التعليقات قبل نشرها.",
+      "comment_form_title": "اترك تعليقا",
+      "name": "اسم",
+      "email": "البريد الإلكتروني",
+      "message": "تعليق",
+      "post": "أضف تعليقا",
+      "back_to_blog": "العودة إلى المدونة",
+      "share": "حصة هذه المادة",
+      "success": "تم نشر تعليقك بنجاح! شكرًا لك!",
+      "success_moderated": "تم نشر تعليقك بنجاح. سننشره بعد قليل ، لأن مدونتنا خاضعة للإشراف."
+    }
+  },
+  "onboarding": {
+    "product_title": "مثال على عنوان المنتج",
+    "collection_title": "اسم مجموعتك"
+  },
+  "products": {
+    "product": {
+      "add_to_cart": "أضف إلى السلة",
+      "choose_options": "اختر الخيارات",
+      "description": "وصف",
+      "on_sale": "تخفيض السعر",
+      "product_variants": "متغيرات المنتج",
+      "media": {
+        "gallery_viewer": "عارض المعرض",
+        "play_model": "تشغيل عارض ثلاثي الأبعاد",
+        "play_video": "شغل الفيديو"
+      },
+      "quantity": {
+        "label": "كمية"
+      },
+      "pickup_availability": {
+        "view_store_info": "عرض معلومات المتجر",
+        "check_other_stores": "تحقق من توافر في المتاجر الأخرى",
+        "pick_up_available": "بيك اب متاح",
+        "unavailable": "تعذر تحميل توفر الالتقاط",
+        "refresh": "ينعش"
+      },
+      "price": {
+        "regular_price": "سعر عادي",
+        "sale_price": "سعر البيع",
+        "unit_price": "سعر الوحدة"
+      },
+      "share": "شارك هذا المنتج",
+      "sold_out": "نفذ",
+      "unavailable": "غير متوفره",
+      "vendor": "بائع",
+      "view_full_details": "عرض التفاصيل الكاملة",
+      "xr_button": "عرض في مساحتك الخاصة",
+      "xr_button_label": "عرض في مساحتك ، وتحميل العنصر في نافذة الواقع المعزز",
+      "include_taxes": "شامل الضريبة."
+    },
+    "modal": {
+      "label": "معرض الوسائط"
+    },
+    "facets": {
+      "apply": "يتقدم",
+      "clear": "صافي",
+      "clear_all": "حذف الكل",
+      "from": "من",
+      "filter_and_sort": "تصفية وفرز",
+      "filter_by_label": "منقي:",
+      "filter_button": "منقي",
+      "show_more": "أظهر المزيد",
+      "show_less": "عرض أقل",
+      "reset": "إعادة ضبط",
+      "sort_button": "فرز",
+      "sort_by_label": "صنف حسب:",
+      "to": "إلى",
+      "clear_filter": "قم بإزالة الفلتر"
+    }
+  },
+  "templates": {
+    "404": {
+      "title": "الصفحة غير موجودة",
+      "subtext": "404"
+    },
+    "search": {
+      "page": "صفحة",
+      "products": "منتجات",
+      "title": "نتائج البحث"
+    },
+    "cart": {
+      "cart": "عربة التسوق"
+    },
+    "contact": {
+      "form": {
+        "title": "نموذج الاتصال",
+        "name": "اسم",
+        "email": "البريد الإلكتروني",
+        "phone": "رقم الهاتف",
+        "comment": "تعليق",
+        "send": "إرسال",
+        "post_success": "شكرا لإتصالك بنا. سنعود إليك في أقرب وقت ممكن.",
+        "error_heading": "يرجى ضبط ما يلي:"
+      }
+    }
+  },
+  "localization": {
+    "country_label": "الدولة \/ المنطقة",
+    "language_label": "لغة",
+    "update_language": "تحديث اللغة",
+    "update_country": "تحديث البلد \/ المنطقة"
   }
 }
