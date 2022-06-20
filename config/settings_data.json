@@ -228,6 +228,24 @@
         "disabled": false,
         "settings": {
         }
+      },
+      "9143341338759596141": {
+        "type": "shopify:\/\/apps\/language-translate-transify\/blocks\/app-embed\/94b2a5ec-733a-4aa0-b07f-b4c291c6c1bd",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "language-translate": {
+        "type": "shopify:\/\/apps\/uplinkly-language-translate\/blocks\/language-translate\/56a854bb-67ff-48c6-ba58-9185b4505de7",
+        "disabled": true,
+        "settings": {
+        }
+      },
+      "6744518860797519131": {
+        "type": "shopify:\/\/apps\/et-language-translate-currency\/blocks\/floating-selector\/35c05b0e-4f05-4fc9-adc7-77b6ccb6b2ca",
+        "disabled": true,
+        "settings": {
+        }
       }
     }
   },
