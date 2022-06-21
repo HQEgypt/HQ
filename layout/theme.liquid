@@ -221,7 +221,8 @@
  {% include 'sohead-reply-common' %}{{ 'lt-flags.css'| asset_url | stylesheet_tag }}
   {% render 'judgeme_core' %}
 {% capture boostersnippet %}{% include "booster-apps-common" %}{% endcapture %}{% unless boostersnippet contains "Liquid error" %}{{ boostersnippet }}{% endunless %}
-</head>
+{% include "s10g_tracking" %}
+ </head>
 
   <body class="gradient">{% include 'appjetty-language-translator' %}
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
