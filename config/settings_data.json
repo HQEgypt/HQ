@@ -253,7 +253,7 @@
       },
       "7555218208816688692": {
         "type": "shopify:\/\/apps\/email-popups-opt-in-pop-ups\/blocks\/app-embed\/48a5a3ef-b6ff-431f-842f-6f17862c4a63",
-        "disabled": false,
+        "disabled": true,
         "settings": {
         }
       }
