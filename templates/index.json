@@ -1,14 +1,5 @@
 {
   "sections": {
-    "social_widget_43492": {
-      "type": "social-widget",
-      "disabled": true,
-      "settings": {
-        "social_widget_id": "43492",
-        "social_product_id": "none",
-        "social_widget_type": "none"
-      }
-    },
     "image_banner": {
       "type": "image-banner",
       "blocks": {
@@ -433,6 +424,12 @@
         "show_view_all": true,
         "padding_top": 52,
         "padding_bottom": 44
+      }
+    },
+    "social_widget_43492": {
+      "type": "social-widget",
+      "settings": {
+        "social_widget_id": "43492"
       }
     }
   },
