@@ -1,5 +1,13 @@
 {
   "sections": {
+    "social_widget_43492": {
+      "type": "social-widget",
+      "settings": {
+        "social_widget_id": "43492",
+        "social_product_id": "none",
+        "social_widget_type": "none"
+      }
+    },
     "image_banner": {
       "type": "image-banner",
       "blocks": {
@@ -7,15 +15,16 @@
           "type": "heading",
           "disabled": true,
           "settings": {
-            "heading": "The Beauty Is You",
-            "heading_size": "h2"
+            "heading": "IMPALA Cosmetics",
+            "heading_size": "h0"
           }
         },
         "text": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "The Beauty Is You",
-            "text_style": "subtitle"
+            "text_style": "body"
           }
         },
         "button": {
@@ -36,15 +45,15 @@
         "button"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/pexels-lena-hsvl-6691152_copy.jpg",
-        "image_overlay_opacity": 0,
+        "image": "shopify:\/\/shop_images\/AAtitled-1.jpg",
+        "image_overlay_opacity": 10,
         "image_height": "large",
         "adapt_height_first_image": true,
-        "desktop_content_position": "bottom-center",
+        "desktop_content_position": "bottom-left",
         "show_text_box": false,
-        "desktop_content_alignment": "center",
+        "desktop_content_alignment": "left",
         "color_scheme": "background-1",
-        "mobile_content_alignment": "center",
+        "mobile_content_alignment": "left",
         "stack_images_on_mobile": false,
         "show_text_below": false
       }
@@ -55,13 +64,13 @@
         "165133087587ae87f1-0": {
           "type": "featured_collection",
           "settings": {
-            "collection": "face"
+            "collection": "261927927966"
           }
         },
         "165133087587ae87f1-1": {
           "type": "featured_collection",
           "settings": {
-            "collection": "lips"
+            "collection": "261927764126"
           }
         },
         "165133087587ae87f1-2": {
@@ -85,7 +94,7 @@
         "9fcd8058-c219-4cdd-a948-c0c495fda680": {
           "type": "featured_collection",
           "settings": {
-            "collection": "mirrors"
+            "collection": "401246453982"
           }
         }
       },
@@ -148,7 +157,7 @@
         "description": "",
         "show_description": true,
         "description_style": "body",
-        "collection": "best-selling-products",
+        "collection": "397275529438",
         "products_to_show": 8,
         "columns_desktop": 4,
         "full_width": true,
@@ -277,7 +286,7 @@
         "collection-0": {
           "type": "collection",
           "settings": {
-            "collection": "best-selling-products"
+            "collection": "397275529438"
           }
         },
         "product": {
@@ -290,7 +299,7 @@
         "collection-1": {
           "type": "collection",
           "settings": {
-            "collection": "mirrors"
+            "collection": "401246453982"
           }
         }
       },
@@ -424,12 +433,6 @@
         "show_view_all": true,
         "padding_top": 52,
         "padding_bottom": 44
-      }
-    },
-    "social_widget_43492": {
-      "type": "social-widget",
-      "settings": {
-        "social_widget_id": "43492"
       }
     }
   },

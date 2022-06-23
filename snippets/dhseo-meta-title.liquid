@@ -1,0 +1,34 @@
+{% if request.page_type == 'index' %}
+{%- capture dhseo_meta_title -%}
+{{ page_title }} | {{ shop.name }}
+{%- endcapture -%}
+{% endif %}
+{% if request.page_type == 'product' %}
+{%- capture dhseo_meta_title -%}
+{{ product.title }} | {{ shop.name }}
+{%- endcapture -%}
+{% endif %}
+{% if request.page_type == 'collection' %}
+{%- capture dhseo_meta_title -%}
+{{ collection.title }} | {{ shop.name }}
+{%- endcapture -%}
+{% endif %}
+{% if request.page_type == 'blog' %}
+{%- capture dhseo_meta_title -%}
+{{ blog.title }} | {{ shop.name }}
+{%- endcapture -%}
+{% endif %}
+{% if request.page_type == 'article' %}
+{%- capture dhseo_meta_title -%}
+{{ article.title }} | {{ shop.name }}
+{%- endcapture -%}
+{% endif %}
+{% if request.page_type == 'page' %}
+{%- capture dhseo_meta_title -%}
+{{ page.title }} | {{ shop.name }}
+{%- endcapture -%}
+{% endif %}
+{% if dhseo_meta_title %}
+{%- assign dhseo_title = dhseo_meta_title | strip_html | strip -%}
+<title>{{ dhseo_title | strip }}</title>
+{% endif %}

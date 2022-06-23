@@ -1,0 +1,34 @@
+{% if request.page_type == 'index' %}
+{%- capture dhseo_meta_description -%}
+{{ page_description }} | {{ shop.name }}
+{%- endcapture -%}
+{% endif %}
+{% if request.page_type == 'product' %}
+{%- capture dhseo_meta_description -%}
+{{ product.description }} {{ shop.name }}
+{%- endcapture -%}
+{% endif %}
+{% if request.page_type == 'collection' %}
+{%- capture dhseo_meta_description -%}
+{{ collection.description }} {{ shop.name }}
+{%- endcapture -%}
+{% endif %}
+{% if request.page_type == 'blog' %}
+{%- capture dhseo_meta_description -%}
+{{ blog.description }} {{ shop.name }}
+{%- endcapture -%}
+{% endif %}
+{% if request.page_type == 'article' %}
+{%- capture dhseo_meta_description -%}
+{{ article.description }} {{ shop.name }}
+{%- endcapture -%}
+{% endif %}
+{% if request.page_type == 'page' %}
+{%- capture dhseo_meta_description -%}
+{{ page.description }} {{ shop.name }}
+{%- endcapture -%}
+{% endif %}
+{% if dhseo_meta_description %}
+{%- assign dhpage_description = dhseo_meta_description | strip_html | strip -%}
+<meta name="description" content="{{ dhpage_description | escape }}">
+{% endif %}

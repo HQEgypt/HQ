@@ -1,0 +1,35 @@
+{% if request.page_type == 'index' %}
+{%- capture dhseo_meta_keyword -%}
+{{ page_title }}
+{%- endcapture -%}
+{% endif %}
+{% if request.page_type == 'product' %}
+{%- capture dhseo_meta_keyword -%}
+{{ product.title }}
+{%- endcapture -%}
+{% endif %}
+{% if request.page_type == 'collection' %}
+{%- capture dhseo_meta_keyword -%}
+{{ collection.title }}
+{%- endcapture -%}
+{% endif %}
+{% if request.page_type == 'blog' %}
+{%- capture dhseo_meta_keyword -%}
+{{ blog.title }}
+{%- endcapture -%}
+{% endif %}
+{% if request.page_type == 'article' %}
+{%- capture dhseo_meta_keyword -%}
+{{ article.title }}
+{%- endcapture -%}
+{% endif %}
+{% if request.page_type == 'page' %}
+{%- capture dhseo_meta_keyword -%}
+{{ page.title }}
+{%- endcapture -%}
+{% endif %}
+{% if dhseo_meta_keyword %}
+{%- assign smart_seo_keyword = dhseo_meta_keyword | strip_html | strip -%}
+{% assign keyword = smart_seo_keyword | strip | downcase  %}
+<meta name="keywords" content="{{ keyword | split: ' ' | uniq | join: ' ' }}"/>
+{% endif %}

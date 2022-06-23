@@ -5,8 +5,8 @@
     "gradient_accent_1": "",
     "colors_accent_2": "#b19a60",
     "gradient_accent_2": "",
-    "colors_text": "#696161",
-    "colors_outline_button_labels": "#b19a60",
+    "colors_text": "#121212",
+    "colors_outline_button_labels": "#121212",
     "colors_background_1": "#ffffff",
     "gradient_background_1": "",
     "colors_background_2": "#ffffff",
@@ -20,13 +20,13 @@
     "spacing_grid_horizontal": 8,
     "spacing_grid_vertical": 8,
     "buttons_border_thickness": 1,
-    "buttons_border_opacity": 50,
+    "buttons_border_opacity": 100,
     "buttons_radius": 0,
-    "buttons_shadow_opacity": 10,
+    "buttons_shadow_opacity": 0,
     "buttons_shadow_horizontal_offset": 0,
-    "buttons_shadow_vertical_offset": 2,
+    "buttons_shadow_vertical_offset": 4,
     "buttons_shadow_blur": 5,
-    "variant_pills_border_thickness": 2,
+    "variant_pills_border_thickness": 1,
     "variant_pills_border_opacity": 55,
     "variant_pills_radius": 40,
     "variant_pills_shadow_opacity": 0,
@@ -63,7 +63,7 @@
     "media_radius": 0,
     "media_shadow_opacity": 0,
     "media_shadow_horizontal_offset": 0,
-    "media_shadow_vertical_offset": -40,
+    "media_shadow_vertical_offset": 36,
     "media_shadow_blur": 5,
     "popup_border_thickness": 1,
     "popup_border_opacity": 10,
@@ -97,7 +97,7 @@
     "predictive_search_show_price": true,
     "currency_code_enabled": true,
     "checkout_logo_image": "shopify:\/\/shop_images\/impala_logo_new_1_1b0ef8be-aadb-4a4d-ad50-1910c13d863b.png",
-    "checkout_accent_color": "#b19a60",
+    "checkout_accent_color": "#ffd4d4",
     "checkout_button_color": "#b19a60",
     "sections": {
       "announcement-bar": {
@@ -106,24 +106,14 @@
           "announcement-bar-0": {
             "type": "announcement",
             "settings": {
-              "text": "The Beauty Is You",
-              "color_scheme": "accent-1",
-              "link": "shopify:\/\/collections\/all"
-            }
-          },
-          "2e875f7c-9018-4682-87f8-4aa9554181c0": {
-            "type": "announcement",
-            "disabled": true,
-            "settings": {
               "text": "Welcome to our store",
               "color_scheme": "accent-1",
-              "link": ""
+              "link": "shopify:\/\/collections\/all"
             }
           }
         },
         "block_order": [
-          "announcement-bar-0",
-          "2e875f7c-9018-4682-87f8-4aa9554181c0"
+          "announcement-bar-0"
         ],
         "settings": {
         }
@@ -178,11 +168,11 @@
           "newsletter_heading": "Subscribe to our emails",
           "show_social": true,
           "enable_country_selector": false,
-          "enable_language_selector": true,
+          "enable_language_selector": false,
           "payment_enable": true,
-          "margin_top": 20,
+          "margin_top": 24,
           "padding_top": 20,
-          "padding_bottom": 0
+          "padding_bottom": 28
         }
       },
       "main-password-header": {
@@ -203,14 +193,20 @@
 
     ],
     "blocks": {
+      "1513253815146976218": {
+        "type": "shopify:\/\/apps\/omnisend-email-marketing-sms\/blocks\/app-embed\/44704aa2-794f-4c5d-8c8e-039c841158e9",
+        "disabled": false,
+        "settings": {
+        }
+      },
       "18306912302550125850": {
         "type": "shopify:\/\/apps\/opinew-product-reviews-app\/blocks\/rich-snippet\/e1d8e0dc-17ff-4e4a-8a8a-1e73c8ef8676",
         "disabled": false,
         "settings": {
         }
       },
-      "12542944477430767875": {
-        "type": "shopify:\/\/apps\/pixeli-facebook-pixel-app\/blocks\/facebook-pixel\/80936fd4-4a11-47fe-8fc8-5d3e9b04878a",
+      "9790993569898449839": {
+        "type": "shopify:\/\/apps\/opinew-product-reviews-app\/blocks\/global\/e1d8e0dc-17ff-4e4a-8a8a-1e73c8ef8676",
         "disabled": false,
         "settings": {
         }
@@ -221,27 +217,9 @@
         "settings": {
         }
       },
-      "1513253815146976218": {
-        "type": "shopify:\/\/apps\/omnisend-email-marketing-sms\/blocks\/app-embed\/44704aa2-794f-4c5d-8c8e-039c841158e9",
+      "12542944477430767875": {
+        "type": "shopify:\/\/apps\/pixeli-facebook-pixel-app\/blocks\/facebook-pixel\/80936fd4-4a11-47fe-8fc8-5d3e9b04878a",
         "disabled": false,
-        "settings": {
-        }
-      },
-      "9143341338759596141": {
-        "type": "shopify:\/\/apps\/language-translate-transify\/blocks\/app-embed\/94b2a5ec-733a-4aa0-b07f-b4c291c6c1bd",
-        "disabled": false,
-        "settings": {
-        }
-      },
-      "14060646107696862457": {
-        "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/judgeme_core\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-        "disabled": false,
-        "settings": {
-        }
-      },
-      "9790993569898449839": {
-        "type": "shopify:\/\/apps\/opinew-product-reviews-app\/blocks\/global\/e1d8e0dc-17ff-4e4a-8a8a-1e73c8ef8676",
-        "disabled": true,
         "settings": {
         }
       },
@@ -251,9 +229,15 @@
         "settings": {
         }
       },
-      "7555218208816688692": {
-        "type": "shopify:\/\/apps\/email-popups-opt-in-pop-ups\/blocks\/app-embed\/48a5a3ef-b6ff-431f-842f-6f17862c4a63",
+      "14060646107696862457": {
+        "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/judgeme_core\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
         "disabled": true,
+        "settings": {
+        }
+      },
+      "9143341338759596141": {
+        "type": "shopify:\/\/apps\/language-translate-transify\/blocks\/app-embed\/94b2a5ec-733a-4aa0-b07f-b4c291c6c1bd",
+        "disabled": false,
         "settings": {
         }
       }

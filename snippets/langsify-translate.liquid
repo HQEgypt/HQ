@@ -379,8 +379,9 @@ class LanguageInline extends HTMLElement {
 customElements.define("language-inline-forms", LanguageInline);
 </script>
 <style>
+.inline-flags {display: none !important;}
 .inline-name {display: inline !important;}
-</style>
+.inline-code, .inline-name, #inline-modal .popup-title, .inline-text {color: #f98181 !important;} .inlineSwitcher .choosen, .inlineSwitcher .inline-option, #inline-modal > div {background-color: #FFF !important;} .inlineSwitcher .inline-option li:hover {background-color: #FFF !important;}</style>
 <script>
 const langDropdown = document.querySelector(
       ".inlineSwitcher .dropdown-options"
