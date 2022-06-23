@@ -106,7 +106,7 @@
           "announcement-bar-0": {
             "type": "announcement",
             "settings": {
-              "text": "Welcome to our store",
+              "text": "The Beauty Is You",
               "color_scheme": "accent-1",
               "link": "shopify:\/\/collections\/all"
             }
