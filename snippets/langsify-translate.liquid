@@ -389,5 +389,17 @@ const langDropdown = document.querySelector(
     const langPopup = document.getElementById("inline-modal");
     const langArrows = document.getElementById("inline-arrows");
     const langChoosenBtn = document.getElementById("choosen-inline");
-langPopup.remove();
+openLangModal = () => {
+ const modal = document.getElementById("inline-modal");
+  if (!!modal) {
+    modal.style.visibility = "visible";
+    modal.style.opacity = 1;
+    modal.style.pointerEvents = "auto";
+  }
+};
+
+langDropdown.remove();
+langArrows.remove();
+langPopup.style.display = "block";
+        langChoosenBtn.addEventListener("click", openLangModal);
 </script>
