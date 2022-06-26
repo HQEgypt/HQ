@@ -139,21 +139,21 @@
             "type": "link_list",
             "settings": {
               "heading": "Quick links",
-              "menu": "footer-menu-1"
+              "menu": "footer-menu"
             }
           },
           "footer-1": {
             "type": "link_list",
             "settings": {
               "heading": "Info",
-              "menu": "footer"
+              "menu": "footer-menu-1"
             }
           },
           "footer-2": {
             "type": "text",
             "settings": {
               "heading": "Our mission",
-              "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
+              "subtext": "<p>As the leading EGYPT beauty establishment we have consistently met the desires, needs and expectations of end and professional users (cosmetic and hair salons and wellness and spa centres) with high-quality cosmetic products  . We build and maintain partner relationships with our consumers as well as all other stakeholders based on trust and reciprocity. We strive for a pleasant working environment and do our best to contribute to the welfare natural .  <br\/>IMPALA Cosmetics is a synonym for an effective, natural, trustworthy user- and environment-IMPALA Cosmetics brand<\/p>"
             }
           }
         },
@@ -164,11 +164,11 @@
         ],
         "settings": {
           "color_scheme": "accent-2",
-          "newsletter_enable": true,
+          "newsletter_enable": false,
           "newsletter_heading": "Subscribe to our emails",
           "show_social": true,
           "enable_country_selector": false,
-          "enable_language_selector": false,
+          "enable_language_selector": true,
           "payment_enable": true,
           "margin_top": 24,
           "padding_top": 20,
